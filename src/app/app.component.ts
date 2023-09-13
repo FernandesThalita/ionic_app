@@ -7,13 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor() {}
-
-@Component({
-  selector: 'app-example',
-  templateUrl: 'example.component.html',
-})
-  public alertButtons = ['OK'];
-
 }
-
-

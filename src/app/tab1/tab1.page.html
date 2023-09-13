@@ -1,17 +1,68 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title>Menu Content</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-content class="ion-padding">This is the menu content.
+    <ion-button>contatos</ion-button>
+    <ion-button>contatos</ion-button>
+    <ion-button href="/tabs/tab3">contatos</ion-button>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-progress-bar type="determinate" [value]="progressValue"></ion-progress-bar>
+  <ion-content class="ion-padding"> selecione a sua pagina.
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+
+    <ion-list>
+      <ion-item>
+        <ion-select placeholder="Select a Fruit">
+          <div slot="label">FRUTA FAVORITA <ion-text color="danger">(Required)</ion-text></div>
+          <ion-select-option value="apple">Apple</ion-select-option>
+          <ion-select-option value="banana">Banana</ion-select-option>
+          <ion-select-option value="orange">Orange</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-label>Followers</ion-label>
+        <ion-badge color="primary">22k</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Likes</ion-label>
+        <ion-badge color="secondary">118k</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Stars</ion-label>
+        <ion-badge color="tertiary">34k</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Completed</ion-label>
+        <ion-badge color="success">80</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Warnings</ion-label>
+        <ion-badge color="warning">70</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Notifications</ion-label>
+        <ion-badge color="danger">1000</ion-badge>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+
+</div>

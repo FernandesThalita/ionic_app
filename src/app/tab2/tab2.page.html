@@ -7,11 +7,54 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-list>
+    <ion-item>
+      <ion-input labelPlacement="floating" >
+        <div slot="label">Email <ion-text color="danger">(obrigatorio)</ion-text></div>
+      </ion-input>
+    </ion-item>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+    <ion-list>
+      <ion-item>
+        <ion-input aria-label="Email"  placeholder="digite seu usuario" ></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-input aria-label="Email" placeholder="digite sua senha"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-input label="Matricula" label-placement="floating" fill="solid"></ion-input>
+
+<br />
+
+<ion-input label="RG" label-placement="floating" fill="outline" ></ion-input>
+
+  </ion-list>
+
+  <ion-card>
+    <img alt="Silhouette of mountains" src="https://img.quizur.com/f/img648efbd5b00b28.10275519.jpg?lastEdited=1687092187" />
+    <ion-card-header>
+      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-button id="present-alert">Click Me</ion-button>
+  <ion-alert
+    trigger="present-alert"
+    header="Alert"
+    subHeader="Important message"
+    message="This is an alert!"
+    [buttons]="alertButtons"
+  ></ion-alert>
+
+
 </ion-content>
